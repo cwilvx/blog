@@ -1,0 +1,30 @@
+$gray: rgba(44, 44, 44, 0.507);
+$black: rgba(22, 22, 22, 0.904);
+
+$small: 0.5rem;
+
+@mixin phone-only {
+  @media (max-width: 599px) {
+    @content;
+  }
+}
+@mixin tablet-portrait {
+  @media (max-width: 900px) {
+    @content;
+  }
+}
+@mixin tablet-landscape {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
+@mixin for-desktop-up {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+@mixin for-big-desktop-up {
+  @media (min-width: 1800px) {
+    @content;
+  }
+}

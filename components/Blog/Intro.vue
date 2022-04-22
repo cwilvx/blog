@@ -22,7 +22,7 @@
   padding: 1rem;
   border-radius: 1rem;
   margin: 1rem 0;
-  background-image: linear-gradient(37deg, rgb(194, 2, 2), rgb(2, 2, 109));
+  background-image: linear-gradient(37deg, rgba(194, 2, 2, 0.781), rgba(2, 2, 109, 0.788));
 
   p {
     font-size: 1.25rem;

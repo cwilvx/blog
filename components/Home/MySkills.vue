@@ -4,6 +4,7 @@
       Here are some technologies that I have been working with recently.
     </div>
     <div id="skills">
+      <div id="ts">TypeScript</div>
       <div id="js">JavaScript</div>
       <div id="vue">Vue</div>
       <div id="python">Python</div>
@@ -26,12 +27,21 @@
       padding: $small;
       border-radius: $small;
       background-color: rgb(230, 50, 50);
-      transition: all .5s ease;
+      transition: all 0.5s ease;
       cursor: default;
 
       &:hover {
         background-size: 20rem;
       }
+    }
+
+    #ts {
+      background-color: rgb(6, 83, 134);
+      background-image: linear-gradient(
+        37deg,
+        rgb(41, 40, 40),
+        rgb(6, 83, 134)
+      );
     }
 
     #js {

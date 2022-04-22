@@ -39,10 +39,7 @@
 
     .name {
       font-size: 5rem;
-      background: linear-gradient(37deg, red, blue);
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
+      @include gtext;
     }
   }
 

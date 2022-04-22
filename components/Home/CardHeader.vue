@@ -6,6 +6,8 @@
 </template>
 
 <style lang="scss">
+@import "../../assets/scss/vars";
+
 .cardheader {
   display: flex;
   align-items: center;
@@ -13,10 +15,8 @@
 
   h1 {
     margin: 0;
-    background: linear-gradient(37deg, red, blue);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    @include gtext;
+    width: max-content;
   }
 
   .line {

@@ -1,9 +1,6 @@
 <template>
   <div id="aboutme" class="rounded">
-    <div class="h">
-      <h1 class="gtext">About Me</h1>
-      <div class="line"></div>
-    </div>
+    <CardHeader>About Me</CardHeader>
     <div class="content">
       <div class="text">
         <p>
@@ -35,6 +32,7 @@
 
 <script setup>
 import MySkills from "./MySkills.vue";
+import CardHeader from "./CardHeader.vue";
 </script>
 
 <style lang="scss">
@@ -45,14 +43,6 @@ import MySkills from "./MySkills.vue";
     display: flex;
     align-items: center;
     gap: 1rem;
-
-    h1 {
-      margin: 0;
-      background: linear-gradient(37deg, red, blue);
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
 
     .line {
       width: 50%;
@@ -66,13 +56,13 @@ import MySkills from "./MySkills.vue";
     gap: $small;
     grid-template-columns: 1fr 0.75fr;
 
-    @include tablet-portrait {
+    @include phone-only {
       grid-template-columns: 1fr;
       gap: 0;
 
       .img {
-          justify-content: flex-start;
-          margin-bottom: 1rem;
+        justify-content: flex-start;
+        margin-bottom: 1rem;
       }
     }
 
@@ -91,7 +81,7 @@ import MySkills from "./MySkills.vue";
       aspect-ratio: 1;
       background-image: url("../../assets/images/avatar.webp");
       background-size: cover;
-      box-shadow: 0rem 0rem 1rem rgba(0, 0, 0, 0.582);
+      @include shadow-black;
     }
   }
 }

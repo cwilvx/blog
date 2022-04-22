@@ -9,7 +9,7 @@
 </template>
 
 <script setup lang="ts">
-import RecentPosts from "../../components/Home/RecentPosts.vue";
+import RecentPosts from "../../components/Blog/RecentPosts.vue";
 import Intro from "../../components/Blog/Intro.vue";
 </script>
 

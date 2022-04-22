@@ -1,14 +1,16 @@
 <template>
-  <div id="home-jumbotron" class="rounded">
-    <div class="btns">
-      <NuxtLink to="/blog" class="btn blog rounded">Visit Blog</NuxtLink>
-      <NuxtLink to="/blog" class="btn resume rounded">See Resume</NuxtLink>
-    </div>
-    <div class="nice">Nice to meet you.</div>
-    <div class="desc">I build stuff that work on the web.</div>
-    <div class="text">
-      Hello there, I'm <br />
-      <span class="name">Mungai</span>
+  <div id="home-jumbotron">
+    <div id="center">
+      <div class="btns">
+        <NuxtLink to="/blog" class="btn blog rounded">Visit Blog</NuxtLink>
+        <NuxtLink to="/blog" class="btn resume rounded">See Resume</NuxtLink>
+      </div>
+      <div class="nice">Nice to meet you.</div>
+      <div class="desc">I build stuff that work on the web.</div>
+      <div class="text">
+        Hello there, I'm <br />
+        <span class="name">Mungai</span>
+      </div>
     </div>
   </div>
 </template>
@@ -21,16 +23,22 @@
 #home-jumbotron {
   font-size: 1rem;
   margin-bottom: 4rem;
+  height: calc(100vh - 5rem);
   display: flex;
-  flex-direction: column-reverse;
-  height: 30rem;
+  align-items: center;
+
+  #center {
+    display: flex;
+    flex-direction: column-reverse;
+    height: max-content;
+  }
 
   .text {
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 2rem;
 
     .name {
-      font-size: 4rem;
+      font-size: 5rem;
       background: linear-gradient(37deg, red, blue);
       -webkit-background-clip: text;
       background-clip: text;
@@ -44,7 +52,7 @@
   }
 
   .nice {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 
   .btns {
@@ -55,7 +63,7 @@
     .btn {
       width: max-content;
       padding: $small;
-      padding: .75rem 2rem;
+      padding: 0.75rem 2rem;
       color: white;
       text-decoration: none;
     }

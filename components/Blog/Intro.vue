@@ -22,7 +22,8 @@
   padding: 1rem;
   border-radius: 1rem;
   margin: 1rem 0;
-  background-image: linear-gradient(37deg, rgba(194, 2, 2, 0.781), rgba(2, 2, 109, 0.788));
+  @include blog-intro-gradient;
+  box-shadow: 0 0 1rem black;
 
   p {
     font-size: 1.25rem;

@@ -1,8 +1,6 @@
-# Nuxt 3 Minimal Starter
+This repo contains the code for [my blog and portfolio](https://mungaiblog.netlify.app/) build using [Nuxt 3](https://v3.nuxtjs.org) and deployed on Netlify.
 
-We recommend to look at the [documentation](https://v3.nuxtjs.org).
-
-## Setup
+## Local setup
 
 Make sure to install the dependencies
 
@@ -27,3 +25,6 @@ yarn build
 ```
 
 Checkout the [deployment documentation](https://v3.nuxtjs.org/docs/deployment).
+
+## Contributing
+Issues and pull requests are welcome.

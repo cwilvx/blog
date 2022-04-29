@@ -1,5 +1,5 @@
 <template>
-  <button @click="handleError">Clear Errors</button>
+  <button @click="handleError">Go home</button>
 </template>
 
 <script setup lang="ts">

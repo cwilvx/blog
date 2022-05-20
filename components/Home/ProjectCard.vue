@@ -20,7 +20,7 @@
       </div>
       <div id="links">
         <a :href="project.links.github" id="github">GitHub</a>
-        <a :href="project.links.site" id="site">Go to Project</a>
+        <!-- <a :href="project.links.site" id="site">Go to Project</a> -->
       </div>
     </div>
   </div>
@@ -33,6 +33,7 @@ defineProps<{
   project: Project;
 }>();
 </script>
+
 <style lang="scss">
 @import "../../assets/scss/vars";
 
@@ -86,13 +87,17 @@ defineProps<{
         right: 0;
         bottom: 0;
         left: 0;
+
+        .cont {
+          scrollbar-width: auto
+        }
       }
     }
 
     .abs {
       @include shadow-black;
       position: absolute;
-      background-color: rgb(25, 15, 41);
+      background-color: rgba(42, 40, 44, 0.692);
       padding: 1rem;
       left: -5rem;
       right: 5rem;
@@ -103,6 +108,7 @@ defineProps<{
       .cont {
         height: 100%;
         overflow: auto;
+        scrollbar-width: none;
       }
 
       #tags {

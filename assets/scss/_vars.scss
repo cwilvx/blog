@@ -1,6 +1,9 @@
 $gray: rgba(44, 44, 44, 0.507);
 $black: rgba(22, 22, 22, 0.904);
 
+$red: #fd3832;
+$blue: #0c09e7;
+
 $small: 0.5rem;
 
 @mixin phone-only {
@@ -30,7 +33,7 @@ $small: 0.5rem;
 }
 
 @mixin gtext {
-  background: linear-gradient(37deg, red, rgb(0, 81, 255));
+  background: linear-gradient(37deg, $red, $blue);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;

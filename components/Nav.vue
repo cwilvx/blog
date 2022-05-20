@@ -1,7 +1,7 @@
 <template>
   <div class="global-nav">
     <div class="link">
-      <NuxtLink to="/">../$home</NuxtLink>
+      <NuxtLink to="/">Mungai</NuxtLink>
     </div>
   </div>
 </template>

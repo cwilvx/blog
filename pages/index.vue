@@ -3,6 +3,7 @@
     <Jumbotron />
     <AboutMe />
     <Projects />
+    <Connect />
   </div>
 </template>
 
@@ -10,6 +11,8 @@
 import Jumbotron from "../components/Home/Jumbotron.vue";
 import AboutMe from "~~/components/Home/AboutMe.vue";
 import Projects from "~~/components/Home/Projects.vue";
+import Connect from "~~/components/Home/Connect.vue";
+
 definePageMeta({
   layout: "default",
 });

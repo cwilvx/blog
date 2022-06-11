@@ -1,3 +1,3 @@
 <template>
-<p>{{$route.params.user}}</p>
+<p>{{$route.params.user}} - {{$route.params.postid}}</p>
 </template>

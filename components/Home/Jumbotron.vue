@@ -6,7 +6,7 @@
         <NuxtLink to="/blog" class="btn resume rounded">See Resume</NuxtLink>
       </div>
       <div class="nice">Nice to meet you.</div>
-      <div class="desc">I build stuff that work on the web.</div>
+      <div class="desc">I'm a Python and Vue developer.</div>
       <div class="text">
         Hello there, I'm <br />
         <span class="name">Mungai</span>

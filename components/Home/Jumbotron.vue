@@ -5,6 +5,7 @@
         <NuxtLink to="/blog" class="btn blog rounded">Visit Blog</NuxtLink>
         <NuxtLink to="/blog" class="btn resume rounded">See Resume</NuxtLink>
       </div>
+      <div class="text">{{ text.line3 }}</div>
       <div class="desc">{{ text.line2 }}</div>
       <div class="text">{{ text.line1 }} <br /></div>
     </div>

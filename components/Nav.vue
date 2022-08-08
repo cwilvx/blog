@@ -11,6 +11,7 @@
 
 .global-nav {
   margin-bottom: $small;
+  margin: 3rem 0;
 
   .link {
     font-size: 2rem;
@@ -25,6 +26,5 @@
       font-size: 3rem;
     }
   }
-  padding: 0;
 }
 </style>

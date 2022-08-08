@@ -4,7 +4,7 @@ $white: rgb(240, 240, 240);
 
 $red: #fd3832;
 $blue: rgb(58, 80, 204);
-$bgblue: rgba(0, 0, 255, 0.3);
+$bgblue: rgba(0, 0, 255, 0.15);
 
 $small: 0.5rem;
 
@@ -13,6 +13,7 @@ $small: 0.5rem;
     @content;
   }
 }
+
 @mixin tablet-portrait {
   @media (max-width: 900px) {
     @content;

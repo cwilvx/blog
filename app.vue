@@ -6,9 +6,11 @@
     </NuxtLayout>
   </div>
 </template>
-<script setup>
+
+<script setup lang="ts">
 const title = "Geoffrey's Blog";
 const description = "This is my blog";
+
 useHead({
   title,
   meta: [

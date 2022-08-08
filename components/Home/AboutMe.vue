@@ -10,7 +10,7 @@
     </CardHeader>
     <div class="content">
       <div class="text">
-        <p v-for="p in bio.paragraphs" :key="index">{{ p }}</p>
+        <p v-for="(p, index) in bio.paragraphs" :key="index">{{ p }}</p>
       </div>
       <div class="img">
         <div class="image"></div>

@@ -7,12 +7,18 @@ export interface Post {
 }
 
 export interface Project {
+  id: string;
   title: string;
   description: string;
-  image: string;
+  cover: string;
   tags: string[];
   links: {
     github: string;
-    site: string;
+    demo: string;
   };
+}
+
+export interface ProjectFull {
+  basic: Project;
+  images: string[];
 }

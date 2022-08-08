@@ -30,3 +30,16 @@ html > body {
 .rounded {
   border-radius: $small;
 }
+
+.button {
+  background-color: $blue;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  padding: $small;
+  border-radius: $small;
+}
+
+.button-sec {
+  background-color: $bgblue;
+  color: $blue;
+}

@@ -15,9 +15,9 @@
 </template>
 
 <script setup lang="ts">
+import projects from "~~/data/home/projects";
 import CardHeader from "./CardHeader.vue";
 import ProjectCard from "./ProjectCard.vue";
-import projects from "~~/strings/projects";
 </script>
 
 <style lang="scss">

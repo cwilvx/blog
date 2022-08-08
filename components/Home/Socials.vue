@@ -10,7 +10,7 @@
 </template>
 
 <script setup lang="ts">
-import links from "~~/strings/links";
+import links from "~~/data/links";
 
 const socials = [
   {

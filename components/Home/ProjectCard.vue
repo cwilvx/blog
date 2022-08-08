@@ -1,10 +1,6 @@
 <template>
   <div class="projectcard">
-    <img
-      src="../../assets/images/alice.png"
-      :alt="project.title"
-      class="rounded"
-    />
+    <img :src="project.cover" :alt="project.title" class="rounded" />
     <div class="text rounded">
       <div class="cont">
         <h1>{{ project.title }}</h1>
@@ -18,7 +14,7 @@
         </div>
       </div>
       <div id="links">
-        <a :href="project.links.site" id="site">View Project</a>
+        <a :href="'projects/' + project.id" class="button">View Project</a>
       </div>
     </div>
   </div>
@@ -124,21 +120,7 @@ defineProps<{
     #links {
       display: flex;
       gap: 1rem;
-
-      a {
-        text-decoration: none;
-        color: inherit;
-        background-color: blue;
-        padding: $small;
-        border-radius: $small;
-        @include align-center;
-        height: max-content;
-      }
-
-      #site {
-        background-color: $blue;
-        color: rgb(255, 255, 255);
-      }
+      border: 1px solid $bgblue;
     }
   }
 

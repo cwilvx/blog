@@ -13,7 +13,7 @@
 </template>
 
 <script setup>
-import text from "~~/strings/jumbotron";
+import text from "~~/data/home/jumbotron";
 </script>
 
 <style lang="scss">

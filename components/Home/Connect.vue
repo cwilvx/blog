@@ -6,12 +6,12 @@
         {{ data.text }}
       </p>
       <div class="say-hi">
-        <div class="copy" @click.prevent="copyToClipboard">
+        <div class="button copy" @click.prevent="copyToClipboard">
           <span v-if="copied">✅ copied</span>
           <span v-else>📋 copy</span>
         </div>
-        <div class="email">{{ data.button.email }}</div>
-        <a :href="data.button.url">
+        <div class="button button-sec email">{{ data.button.email }}</div>
+        <a :href="data.button.url" class="button">
           <div>{{ data.button.text }}</div>
         </a>
       </div>
@@ -19,7 +19,7 @@
   </div>
 </template>
 <script setup lang="ts">
-import data from "~~/strings/lets-connect";
+import data from "~~/data/lets-connect";
 const copied = ref(false);
 
 function copyToClipboard() {
@@ -56,21 +56,9 @@ function copyToClipboard() {
     .say-hi {
       display: flex;
       gap: 1rem;
-      color: #fff;
-
-      a {
-        color: #fff;
-        text-decoration: none;
-      }
 
       & > * {
         padding: 1rem;
-        // font-size: 1.25rem;
-        // height: 1rem;
-        border-radius: $small;
-        border: none;
-        transition: all 0.5s ease;
-        background-color: $blue;
       }
 
       .copy {
@@ -78,8 +66,6 @@ function copyToClipboard() {
       }
 
       .email {
-        background-color: $bgblue;
-        color: $blue;
         font-weight: bolder;
       }
     }

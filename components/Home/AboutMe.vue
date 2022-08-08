@@ -10,7 +10,9 @@
     </CardHeader>
     <div class="content">
       <div class="text">
-        <p v-for="(p, index) in bio.paragraphs" :key="index">{{ p }}</p>
+        <p v-for="(p, index) in bio.paragraphs" :key="index">
+          {{ p }}
+        </p>
       </div>
       <div class="img">
         <div class="image"></div>
@@ -21,9 +23,9 @@
 </template>
 
 <script setup>
-import MySkills from "./MySkills.vue";
+import bio from "~~/data/home/bio";
 import CardHeader from "./CardHeader.vue";
-import bio from "~~/strings/bio";
+import MySkills from "./MySkills.vue";
 </script>
 
 <style lang="scss">

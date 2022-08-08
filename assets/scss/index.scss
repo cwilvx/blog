@@ -1,10 +1,10 @@
 @import "./vars";
-@import "./dark.scss";
 
 @font-face {
   font-family: "SFCompactDisplay";
   src: url("../font/sf.woff");
 }
+
 html {
   overflow-y: scroll;
   scrollbar-color: gray transparent;
@@ -24,8 +24,7 @@ html > body {
   display: grid;
   place-items: center;
   background-repeat: no-repeat;
-
-  font-family: SFCompactDisplay;
+  font-family: "SFCompactDisplay";
 }
 
 .rounded {

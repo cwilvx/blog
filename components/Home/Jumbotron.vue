@@ -5,17 +5,15 @@
         <NuxtLink to="/blog" class="btn blog rounded">Visit Blog</NuxtLink>
         <NuxtLink to="/blog" class="btn resume rounded">See Resume</NuxtLink>
       </div>
-      <div class="nice">Nice to meet you.</div>
-      <div class="desc">I'm a Python and Vue developer.</div>
-      <div class="text">
-        Hello there, I'm <br />
-        <span class="name">Mungai</span>
-      </div>
+      <div class="desc">{{ text.line2 }}</div>
+      <div class="text">{{ text.line1 }} <br /></div>
     </div>
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+import text from "~~/strings/jumbotron";
+</script>
 
 <style lang="scss">
 @import "../../assets/scss/vars";
@@ -23,7 +21,7 @@
 #home-jumbotron {
   font-size: 1rem;
   margin-bottom: 4rem;
-  height: calc(100vh - 5rem);
+  height: calc(100vh * .5);
   display: flex;
   align-items: center;
 
@@ -39,7 +37,6 @@
 
     .name {
       font-size: 5rem;
-      @include gtext;
     }
   }
 
@@ -66,19 +63,11 @@
     }
 
     .blog {
-      background-image: linear-gradient(
-        37deg,
-        rgba(111, 0, 255, 0.493),
-        rgba(0, 0, 255, 0.555)
-      );
+      background-color: $blue;
     }
 
     .resume {
-      background-image: linear-gradient(
-        37deg,
-        rgba(255, 0, 111, 0.493),
-        rgba(255, 0, 0, 0.555)
-      );
+      background-color: $red;
     }
   }
 }

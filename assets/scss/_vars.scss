@@ -3,7 +3,8 @@ $black: rgba(22, 22, 22, 0.904);
 $white: rgb(240, 240, 240);
 
 $red: #fd3832;
-$blue: #0c09e7;
+$blue: rgb(58, 80, 204);
+$bgblue: rgba(0, 0, 255, 0.3);
 
 $small: 0.5rem;
 
@@ -31,13 +32,6 @@ $small: 0.5rem;
   @media (min-width: 1800px) {
     @content;
   }
-}
-
-@mixin gtext {
-  background: linear-gradient(37deg, $red, $blue);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 @mixin blog-intro-gradient {

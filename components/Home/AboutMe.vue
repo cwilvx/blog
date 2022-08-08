@@ -1,26 +1,16 @@
 <template>
   <div id="aboutme" class="rounded">
-    <CardHeader>About Me</CardHeader>
+    <CardHeader>
+      <template #default>
+        {{ bio.title }}
+      </template>
+      <template #emoji>
+        {{ bio.emoji }}
+      </template>
+    </CardHeader>
     <div class="content">
       <div class="text">
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium
-          distinctio fuga eius. Totam qui quo suscipit, repudiandae mollitia
-          earum perspiciatis laborum officia ea, maiores similique quaerat illo
-          iste ipsum vero.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
-          commodi, rem excepturi cum cupiditate beatae sit quaerat totam
-          nesciunt quae aut, adipisci perspiciatis accusamus cumque ducimus
-          porro assumenda optio? Qui?
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
-          commodi, rem excepturi cum cupiditate beatae sit quaerat totam
-          nesciunt quae aut, adipisci perspiciatis accusamus cumque ducimus
-          porro assumenda optio? Qui?
-        </p>
+        <p v-for="p in bio.paragraphs" :key="index">{{ p }}</p>
       </div>
       <div class="img">
         <div class="image"></div>
@@ -33,6 +23,7 @@
 <script setup>
 import MySkills from "./MySkills.vue";
 import CardHeader from "./CardHeader.vue";
+import bio from "~~/strings/bio";
 </script>
 
 <style lang="scss">

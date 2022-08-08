@@ -1,26 +1,24 @@
 <template>
   <div class="projectcard">
-    <div class="image rounded"></div>
-    <div class="text">
-      <div class="abs rounded">
-        <div class="cont">
-          <h1>{{ project.title }}</h1>
-          <p>{{ project.description }}</p>
-          <div id="tags">
-            <div class="tag" v-for="tag in project.tags" :key="tag">
-              {{ tag }}
-            </div>
-          </div>
-        </div>
+    <img
+      src="../../assets/images/alice.png"
+      :alt="project.title"
+      class="rounded"
+    />
+    <div class="text rounded">
+      <div class="cont">
+        <h1>{{ project.title }}</h1>
+        <p>{{ project.description }}</p>
       </div>
     </div>
     <div class="footer">
       <div id="tags">
-        <div class="tag" v-for="tag in project.tags" :key="tag">{{ tag }}</div>
+        <div v-for="tag in project.tags" :key="tag" class="rounded">
+          {{ tag }}
+        </div>
       </div>
       <div id="links">
-        <a :href="project.links.github" id="github">GitHub</a>
-        <!-- <a :href="project.links.site" id="site">Go to Project</a> -->
+        <a :href="project.links.site" id="site">View Project</a>
       </div>
     </div>
   </div>
@@ -43,62 +41,51 @@ defineProps<{
   flex-wrap: wrap;
 
   & > * {
-    border: solid 1px rgba(128, 128, 128, 0.438);
-    border-radius: $small;
+    background-color: $bgblue;
     padding: $small;
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    font-weight: bold;
+
     cursor: default;
-    height: max-content;
+    color: $blue;
   }
 }
 
 .projectcard {
+  color: $white;
   display: grid;
   width: 100%;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr max-content;
+  grid-template-rows: 1fr max-content;
   grid-template-areas:
     "image image text text"
-    "image image text text"
-    "image image text text"
     "footer footer footer footer";
-  gap: 1rem;
+  gap: 2rem;
 
-  .image {
+  img {
     grid-area: image;
-    height: 20rem;
-    background-image: url("../../assets/images/alice.png");
-    @include image;
-    background-position: 0 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   .text {
     grid-area: text;
-    font-size: 1.2rem;
     position: relative;
     transition: all 0.5s ease;
-
-    &:hover {
-      height: 100%;
-      transition: all 0.5s ease;
-
-      .abs {
-        transition: all 0.5s ease;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-
-        .cont {
-          scrollbar-width: auto
-        }
-      }
-    }
+    background-color: rgba(42, 40, 44, 0.692);
+    background-image: radial-gradient(
+      circle,
+      rgba(101, 106, 109, 0.651) 0%,
+      rgba(25, 25, 26, 0.603) 100%
+    );
+    padding: 1rem;
 
     .abs {
       @include shadow-black;
       position: absolute;
-      background-color: rgba(42, 40, 44, 0.692);
-      padding: 1rem;
       left: -5rem;
       right: 5rem;
       bottom: 2rem;
@@ -109,20 +96,6 @@ defineProps<{
         height: 100%;
         overflow: auto;
         scrollbar-width: none;
-      }
-
-      #tags {
-        @include tags();
-        display: none;
-
-        & > * {
-          background-color: gray;
-        }
-
-        @include phone-only {
-          display: flex;
-          font-size: 0.9rem;
-        }
       }
     }
   }
@@ -162,13 +135,9 @@ defineProps<{
         height: max-content;
       }
 
-      #github {
-        background-color: rgb(43, 42, 42);
-        background-image: linear-gradient(37deg, rgb(43, 42, 42), gray);
-      }
-
       #site {
-        background-color: rgb(204, 58, 82);
+        background-color: $blue;
+        color: rgb(255, 255, 255);
       }
     }
   }

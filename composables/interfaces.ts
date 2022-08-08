@@ -21,4 +21,8 @@ export interface Project {
 export interface ProjectFull {
   basic: Project;
   images: string[];
+  purpose: string[];
+  challenges: string[];
+  stack: string[];
+  lessons: string[];
 }

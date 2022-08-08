@@ -8,6 +8,8 @@ $bgblue: rgba(0, 0, 255, 0.15);
 
 $small: 0.5rem;
 
+$projectgap: 5rem;
+
 @mixin phone-only {
   @media (max-width: 599px) {
     @content;

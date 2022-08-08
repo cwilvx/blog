@@ -11,6 +11,7 @@ export interface Project {
   title: string;
   description: string;
   cover: string;
+  covercaption: string;
   tags: string[];
   links: {
     github: string;

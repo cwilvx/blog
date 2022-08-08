@@ -25,6 +25,7 @@
       :alt="project.title + 'cover image'"
       class="rounded"
     />
+    <figcaption>{{ project.covercaption }}</figcaption>
   </div>
 </template>
 <script setup lang="ts">

@@ -15,7 +15,7 @@ export const proj_alice_full = {
     "https://picsum.photos/445/550",
     "https://picsum.photos/445/300",
     "https://picsum.photos/445/555",
-    "https://picsum.photos/1080/620",
+    "/img/cover.png",
   ],
   stack: [
     "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",

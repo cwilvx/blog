@@ -17,10 +17,17 @@ const lessonstitle = "💪 Lessons Learned";
 </script>
 
 <style lang="scss">
-.project-lessons {  
+@import "../../assets/scss/vars";
+
+.project-lessons {
   img {
     width: 100%;
     height: auto;
+    margin: $projectgap 0;
+  }
+
+  .text-block {
+    max-width: calc(100% * 0.75);
   }
 }
 </style>

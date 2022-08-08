@@ -1,14 +1,16 @@
 <template>
-  <ProjectHeader :project="project.basic" />
-  <div class="project-body">
-    <FirstHalf
-      :purpose="project.purpose"
-      :challenges="project.challenges"
-      :image="project.images[0]"
-    />
-    <SecondHalf :stack="project.stack" :images="project.images.slice(1, 3)" />
+  <div class="project-page">
+    <ProjectHeader :project="project.basic" />
+    <div class="project-body">
+      <FirstHalf
+        :purpose="project.purpose"
+        :challenges="project.challenges"
+        :image="project.images[0]"
+      />
+      <SecondHalf :stack="project.stack" :images="project.images.slice(1, 3)" />
+    </div>
+    <Lessons :image="project.images.pop()" :lessons="project.lessons" />
   </div>
-  <Lessons :image="project.images.pop()" :lessons="project.lessons" />
 </template>
 
 <script setup lang="ts">
@@ -29,6 +31,10 @@ const project = getProject(pid);
 
 <style lang="scss">
 @import "../../assets/scss/vars";
+
+.project-page {
+  margin-bottom: $projectgap;
+}
 
 .project-body {
   display: grid;

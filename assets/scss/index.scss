@@ -48,3 +48,10 @@ img {
   border-radius: $small;
   margin: 0 auto;
 }
+
+figcaption {
+  text-align: center;
+  font-size: small;
+  color: $gray;
+  font-style: italic;
+}

@@ -5,7 +5,8 @@ export const project_alice = {
   title: "Alice Music Player 🎵",
   description:
     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit quas consectetur amet harum sed accusamus tempore nisi! Autem quisquam mollitia consectetur quis, officiis eaque quia. Sapiente laboriosam hic officia dolorum!Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-  cover: "../assets/images/alice/cover.png",
+  cover: "/img/cover.png",
+  covercaption: "Image has been zoomed (120%)",
   tags: [
     "🛠 solo project",
     "typescript",

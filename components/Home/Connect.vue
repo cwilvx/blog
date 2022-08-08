@@ -1,6 +1,6 @@
 <template>
   <div id="lets-connect">
-    <h1>Let's Connect</h1>
+    <h1>{{ data.title }}</h1>
     <div class="grid">
       <p>
         {{ data.text }}
@@ -10,9 +10,9 @@
           <span v-if="copied">✅ copied</span>
           <span v-else>📋 copy</span>
         </div>
-        <div class="button button-sec email">{{ data.button.email }}</div>
-        <a :href="data.button.url" class="button">
-          <div>{{ data.button.text }}</div>
+        <div class="button button-sec email">{{ data.info.email }}</div>
+        <a :href="'mailto:' + data.info.email" class="button">
+          <div>{{ data.info.text }}</div>
         </a>
       </div>
     </div>
@@ -23,7 +23,7 @@ import data from "~~/data/lets-connect";
 const copied = ref(false);
 
 function copyToClipboard() {
-  const text = data.button.email;
+  const text = data.info.email;
 
   navigator.clipboard.writeText(text).then(() => {
     copied.value = true;

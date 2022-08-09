@@ -2,7 +2,10 @@
   <div class="first-half half">
     <TextBlock :text="purpose" :header="titles.purpose" />
     <img :src="image" alt="project image" class="rounded" />
-    <TextBlock :text="challenges" :header="titles.challenges" />
+    <TextBlock
+      :text="challenges"
+      :header="titles.challenges"
+    />
   </div>
 </template>
 <script setup lang="ts">
@@ -15,9 +18,10 @@ defineProps<{
 }>();
 
 const titles = {
-  purpose: "Project Purpose and Goal",
-  challenges: "🪨 Challenges",
+  purpose: "⭐ Project Objective and Purpose",
+  challenges: "🏋 Challenges",
 };
+
 </script>
 
 <style lang="scss">

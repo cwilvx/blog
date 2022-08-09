@@ -120,7 +120,6 @@ defineProps<{
     #links {
       display: flex;
       gap: 1rem;
-      border: 1px solid $bgblue;
     }
   }
 

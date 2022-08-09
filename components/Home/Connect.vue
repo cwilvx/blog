@@ -1,18 +1,22 @@
 <template>
   <div id="lets-connect">
-    <h1>{{ data.title }}</h1>
+    <h1>
+      {{ data.title }} <img src="../../assets/images/icons/chat.png" alt="" />
+    </h1>
     <div class="grid">
       <p>
         {{ data.text }}
       </p>
       <div class="say-hi">
         <div class="button copy" @click.prevent="copyToClipboard">
-          <span v-if="copied">✅ copied</span>
-          <span v-else>📋 copy</span>
+          <div v-if="copied">✅ copied</div>
+          <div v-else>📋 copy</div>
         </div>
         <div class="button button-sec email">{{ data.info.email }}</div>
         <a :href="'mailto:' + data.info.email" class="button">
-          <div>{{ data.info.text }}</div>
+          <div class="chat">
+            {{ data.info.text }}
+          </div>
         </a>
       </div>
     </div>
@@ -40,7 +44,13 @@ function copyToClipboard() {
   margin-bottom: 10rem;
 
   h1 {
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // text-align: center;
+    width: max-content;
+    margin: 0 auto;
+    gap: $small;
   }
 
   .grid {
@@ -56,6 +66,17 @@ function copyToClipboard() {
     .say-hi {
       display: flex;
       gap: 1rem;
+
+      .chat {
+        display: flex;
+        align-items: center;
+        gap: $small;
+      }
+
+      img {
+        width: 2rem;
+        aspect-ratio: 1;
+      }
 
       & > * {
         padding: 1rem;

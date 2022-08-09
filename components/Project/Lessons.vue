@@ -1,7 +1,7 @@
 <template>
   <div class="project-lessons">
+    <TextBlock :text="lessons" :header="lessonstitle" :emoji="'cat_emoji'" />
     <img :src="image" />
-    <TextBlock :text="lessons" :header="lessonstitle" />
   </div>
 </template>
 
@@ -13,7 +13,7 @@ defineProps<{
   lessons: string[];
 }>();
 
-const lessonstitle = "💪 Lessons Learned";
+const lessonstitle = "Insights";
 </script>
 
 <style lang="scss">

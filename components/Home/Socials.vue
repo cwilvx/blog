@@ -5,7 +5,11 @@
         s.name
       }}</a>
     </div>
-    <img :src="links.socials.albums" alt="" />
+    <div class="images">
+      <img src="../../assets/images/icons/music.gif" alt="" />
+      <img :src="links.socials.albums" alt="" />
+      <img src="../../assets/images/icons/music.gif" alt="" />
+    </div>
   </div>
 </template>
 
@@ -29,6 +33,13 @@ const socials = [
 
 #home-socials {
   margin-bottom: 1rem;
+
+  .images {
+    display: grid;
+    grid-template-columns: repeat(3, max-content);
+    margin: 0 auto;
+    width: max-content;
+  }
 
   img {
     width: 100%;

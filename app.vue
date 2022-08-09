@@ -1,10 +1,8 @@
 <template>
-  <div class="body">
     <Nav />
     <NuxtLayout>
       <NuxtPage />
     </NuxtLayout>
-  </div>
 </template>
 
 <script setup lang="ts">
@@ -26,5 +24,6 @@ useHead({
 #__nuxt {
   width: 100%;
   max-width: 70rem;
+  overflow-x: hidden;
 }
 </style>

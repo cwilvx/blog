@@ -23,7 +23,7 @@
     <img
       :src="project.cover"
       :alt="project.title + 'cover image'"
-      class="rounded"
+      class="rounded img-100"
     />
     <figcaption>{{ project.covercaption }}</figcaption>
   </div>
@@ -67,6 +67,16 @@ defineProps<{
     margin-top: 2rem;
     width: 100%;
     height: auto;
+  }
+
+  @include phone-only {
+    .heading {
+      grid-template-columns: 1fr;
+    }
+
+    p {
+      width: 100%;
+    }
   }
 }
 </style>

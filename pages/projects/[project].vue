@@ -33,6 +33,7 @@ const project = getProject(pid);
 @import "../../assets/scss/vars";
 
 .project-page {
+  width: 100%;
   margin-bottom: $projectgap;
 }
 
@@ -41,5 +42,18 @@ const project = getProject(pid);
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
   margin: $projectgap 0;
+  width: 100%;
+
+  @include tablet-portrait {
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  @include phone-only {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
 }
 </style>

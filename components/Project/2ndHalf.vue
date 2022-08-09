@@ -16,6 +16,8 @@ defineProps<{
 const stacktitle = "🛠 Web Stack and Explanation";
 </script>
 <style lang="scss">
+@import "../../assets/scss/vars";
+
 .second-half {
   img:first-child {
     margin-top: 7rem;
@@ -24,6 +26,16 @@ const stacktitle = "🛠 Web Stack and Explanation";
   .text-block {
     margin-left: -1rem;
     margin-right: 1rem;
+  }
+
+  @include phone-only {
+    .text-block {
+      margin: 0;
+    }
+
+    img:first-child {
+      margin-top: 0;
+    }
   }
 }
 </style>

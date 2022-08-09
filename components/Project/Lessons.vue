@@ -1,7 +1,7 @@
 <template>
   <div class="project-lessons">
     <TextBlock :text="lessons" :header="lessonstitle" :emoji="'cat_emoji'" />
-    <img :src="image" />
+    <img :src="image" class="img-100" />
   </div>
 </template>
 
@@ -27,7 +27,13 @@ const lessonstitle = "Insights";
   }
 
   .text-block {
-    max-width: calc(100% * 0.75);
+    width: calc(100% * 0.75);
+  }
+
+  @include phone-only {
+    .text-block {
+      width: 100%;
+    }
   }
 }
 </style>

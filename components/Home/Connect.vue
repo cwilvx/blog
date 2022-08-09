@@ -4,7 +4,7 @@
       {{ data.title }} <img src="../../assets/images/icons/chat.png" alt="" />
     </h1>
     <div class="grid">
-      <p>
+      <p class="connect-text">
         {{ data.text }}
       </p>
       <div class="say-hi">
@@ -47,25 +47,25 @@ function copyToClipboard() {
     display: flex;
     align-items: center;
     justify-content: center;
-    // text-align: center;
     width: max-content;
     margin: 0 auto;
     gap: $small;
   }
 
   .grid {
-    display: grid;
-    place-items: center;
+    width: 100%;
 
-    p {
-      text-align: center;
+    .connect-text {
       max-width: 30rem;
+      margin: 1rem auto;
       font-size: 1.25rem;
     }
 
     .say-hi {
+      width: max-content;
       display: flex;
       gap: 1rem;
+      margin: 0 auto;
 
       .chat {
         display: flex;
@@ -88,6 +88,14 @@ function copyToClipboard() {
 
       .email {
         font-weight: bolder;
+      }
+
+      @include phone-only {
+        gap: $small;
+
+        .copy {
+          display: none;
+        }
       }
     }
   }

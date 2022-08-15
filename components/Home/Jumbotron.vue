@@ -2,8 +2,10 @@
   <div id="home-jumbotron">
     <div id="center">
       <div class="btns">
-        <NuxtLink to="/blog" class="btn blog rounded">Visit Blog</NuxtLink>
-        <NuxtLink to="/blog" class="btn resume rounded">See Resume</NuxtLink>
+        <NuxtLink to="/blog" class="button resume">See Resume</NuxtLink>
+        <NuxtLink to="/blog" class="button button-sec blog"
+          >Visit Blog</NuxtLink
+        >
       </div>
       <h1 class="text">{{ text.line3 }}</h1>
       <h1 class="desc">{{ text.line2 }}</h1>
@@ -22,7 +24,7 @@ import text from "~~/data/home/jumbotron";
 #home-jumbotron {
   font-size: 1rem;
   margin-bottom: 4rem;
-  height: calc(100vh * .5);
+  height: calc(100vh * 0.5);
   display: flex;
   align-items: center;
 
@@ -58,21 +60,32 @@ import text from "~~/data/home/jumbotron";
     display: flex;
     gap: 1rem;
 
-    .btn {
-      width: max-content;
-      padding: $small;
+    & > * {
       padding: 0.75rem 2rem;
-      color: white;
-      text-decoration: none;
     }
 
     .blog {
-      background-color: $blue;
+      &:hover {
+        background-color: $black !important;
+        color: $white !important;
+      }
     }
 
-    .resume {
-      background-color: $red;
-    }
+    // .btn {
+    //   width: max-content;
+    //   padding: $small;
+    //   color: white;
+    //   text-decoration: none;
+    // }
+
+    // .blog {
+    //   background-color: $accent;
+    // }
+
+    // .resume {
+    //   background-color: $muted;
+    //   color: $accent;
+    // }
   }
 }
 </style>

@@ -1,0 +1,68 @@
+
+@mixin phone-only {
+    @media (max-width: 599px) {
+      @content;
+    }
+  }
+  
+  @mixin tablet-portrait {
+    @media (max-width: 900px) {
+      @content;
+    }
+  }
+  @mixin tablet-landscape {
+    @media (max-width: 1200px) {
+      @content;
+    }
+  }
+  @mixin for-desktop-up {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  }
+  @mixin for-big-desktop-up {
+    @media (min-width: 1800px) {
+      @content;
+    }
+  }
+  
+  @mixin blog-intro-gradient {
+    background-image: linear-gradient(
+      40deg,
+      hsl(0deg 0% 9%) 0%,
+      hsl(263deg 22% 10%) 13%,
+      hsl(260deg 38% 12%) 18%,
+      hsl(258deg 52% 13%) 23%,
+      hsl(256deg 64% 15%) 27%,
+      hsl(253deg 75% 16%) 30%,
+      hsl(250deg 85% 18%) 33%,
+      hsl(245deg 94% 19%) 37%,
+      hsl(260deg 100% 20%) 40%,
+      hsl(287deg 100% 21%) 43%,
+      hsl(310deg 100% 24%) 46%,
+      hsl(324deg 100% 31%) 49%,
+      hsl(333deg 100% 38%) 51%,
+      hsl(341deg 100% 43%) 54%,
+      hsl(348deg 100% 47%) 57%,
+      hsl(355deg 100% 49%) 60%,
+      hsl(4deg 95% 47%) 63%,
+      hsl(6deg 88% 42%) 67%,
+      hsl(7deg 82% 36%) 70%,
+      hsl(9deg 75% 31%) 73%,
+      hsl(10deg 67% 25%) 77%,
+      hsl(11deg 56% 20%) 82%,
+      hsl(12deg 39% 14%) 87%,
+      hsl(0deg 0% 9%) 100%
+    );
+  }
+  
+  @mixin image {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  @mixin shadow-black {
+    box-shadow: 0rem 0rem 1rem rgba(0, 0, 0, 0.582);
+  }
+  

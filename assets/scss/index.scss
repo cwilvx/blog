@@ -27,7 +27,8 @@ html > body {
   font-family: "SFCompactDisplay";
   color: rgb(54, 54, 54);
 
-  h1, h2 {
+  h1,
+  h2 {
     color: $black !important;
   }
 }
@@ -37,16 +38,27 @@ html > body {
 }
 
 .button {
-  background-color: $blue;
+  background-color: $accent;
   color: rgb(255, 255, 255);
   text-decoration: none;
   padding: $small;
   border-radius: $small;
+  transition: all 0.25s ease-in-out;
+
+  &:hover {
+    background-color: $secondary;
+    color: $white;
+  }
 }
 
 .button-sec {
-  background-color: $bgblue;
-  color: $blue;
+  background-color: $muted;
+  color: $accent;
+
+  &:hover {
+    background-color: $muted;
+    color: $accent;
+  }
 }
 
 img {
@@ -57,6 +69,6 @@ img {
 figcaption {
   text-align: center;
   font-size: small;
-  color: $gray;
+  color: $secondary;
   font-style: italic;
 }

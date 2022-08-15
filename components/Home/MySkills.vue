@@ -60,7 +60,7 @@ const skills = [
     }
 
     & > * {
-      color: $blue;
+      color: $accent;
     }
   }
 }

@@ -40,7 +40,7 @@ defineProps<{
   flex-wrap: wrap;
 
   & > * {
-    background-color: $bgblue;
+    background-color: $muted;
     padding: $small;
     display: flex;
     align-items: center;
@@ -48,7 +48,7 @@ defineProps<{
     font-weight: bold;
 
     cursor: default;
-    color: $blue;
+    color: $accent;
   }
 }
 

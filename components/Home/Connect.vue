@@ -42,6 +42,16 @@ function copyToClipboard() {
 
 #lets-connect {
   margin-bottom: 10rem;
+  background-color: rgba(0, 0, 0, 0.13);
+  width: max-content;
+  margin: 10rem auto;
+  padding: 2rem;
+  border-radius: 1rem;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.5);
+  }
 
   h1 {
     display: flex;
@@ -50,6 +60,10 @@ function copyToClipboard() {
     width: max-content;
     margin: 0 auto;
     gap: $small;
+
+    img {
+      height: 2.5rem;
+    }
   }
 
   .grid {
@@ -59,6 +73,7 @@ function copyToClipboard() {
       max-width: 30rem;
       margin: 1rem auto;
       font-size: 1.25rem;
+      text-align: center;
     }
 
     .say-hi {
@@ -71,11 +86,6 @@ function copyToClipboard() {
         display: flex;
         align-items: center;
         gap: $small;
-      }
-
-      img {
-        width: 2rem;
-        aspect-ratio: 1;
       }
 
       & > * {
@@ -97,6 +107,15 @@ function copyToClipboard() {
           display: none;
         }
       }
+    }
+  }
+
+  @include phone-only {
+    padding: $small;
+    width: auto;
+
+    .connect-text {
+      font-size: 1rem !important;
     }
   }
 }

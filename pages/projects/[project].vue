@@ -21,10 +21,6 @@ import Lessons from "~~/components/Project/Lessons.vue";
 
 const route = useRoute();
 
-definePageMeta({
-  layout: "project",
-});
-
 const pid = route.params.project as string;
 const project = getProject(pid);
 </script>

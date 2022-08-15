@@ -1,8 +1,10 @@
 <template>
-  <slot />
-  <div class="default-bottom">
-    <Connect />
-    <Socials />
+  <div>
+    <slot />
+    <div class="default-bottom">
+      <Connect />
+      <Socials />
+    </div>
   </div>
 </template>
 

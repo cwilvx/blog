@@ -1,9 +1,13 @@
 <template>
   <div class="projectcard">
-    <img :src="project.cover" :alt="project.title" class="rounded" />
+    <a :href="'projects/' + project.id" class="project-img">
+      <img :src="project.cover" :alt="project.title" class="rounded" />
+    </a>
     <div class="text rounded">
       <div class="cont">
-        <h1>{{ project.title }}</h1>
+        <a :href="'projects/' + project.id">
+          <h1>{{ project.title }}</h1>
+        </a>
         <p>{{ project.description }}</p>
       </div>
     </div>
@@ -30,7 +34,6 @@ defineProps<{
 
 <style lang="scss">
 @import "../../assets/scss/vars";
-
 @mixin tags {
   display: flex;
   gap: 1rem;
@@ -60,8 +63,17 @@ defineProps<{
     "footer footer footer footer";
   gap: 2rem;
 
-  img {
+  a {
+    width: 100%;
+    color: $white;
+    text-decoration: none;
+  }
+
+  .project-img {
     grid-area: image;
+  }
+
+  img {
     width: 100%;
     height: 100%;
     object-fit: cover;

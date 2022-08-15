@@ -1,9 +1,0 @@
-<template>
-  <defaultLayout>
-    <slot />
-  </defaultLayout>
-</template>
-
-<script setup lang="ts">
-import defaultLayout from "./default.vue";
-</script>

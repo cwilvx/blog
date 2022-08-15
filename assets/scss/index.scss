@@ -25,6 +25,11 @@ html > body {
   place-items: center;
   background-repeat: no-repeat;
   font-family: "SFCompactDisplay";
+  color: rgb(54, 54, 54);
+
+  h1, h2 {
+    color: $black !important;
+  }
 }
 
 .rounded {

@@ -1,0 +1,1 @@
+export default "With time, I have come to have solid understanding of computer science and web development concepts. I've also been able to learn and implement the following concepts in real world projects:";

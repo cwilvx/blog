@@ -53,7 +53,7 @@ defineProps<{
 }
 
 .projectcard {
-  color: $white;
+  // color: $white;
   display: grid;
   width: 100%;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -63,11 +63,9 @@ defineProps<{
     "footer footer footer footer";
   gap: 2rem;
 
-  a {
-    width: 100%;
-    color: $white;
-    text-decoration: none;
-  }
+  // h1 {
+  //   color: $white !important;
+  // }
 
   .project-img {
     grid-area: image;
@@ -83,28 +81,11 @@ defineProps<{
     grid-area: text;
     position: relative;
     transition: all 0.5s ease;
-    background-color: rgba(42, 40, 44, 0.692);
-    background-image: radial-gradient(
-      circle,
-      rgba(101, 106, 109, 0.651) 0%,
-      rgba(25, 25, 26, 0.603) 100%
-    );
+    background-color: rgb(236, 236, 236);
     padding: 1rem;
 
-    .abs {
-      @include shadow-black;
-      position: absolute;
-      left: -5rem;
-      right: 5rem;
-      bottom: 2rem;
-      top: 2rem;
-      transition: all 0.5s ease;
-
-      .cont {
-        height: 100%;
-        overflow: auto;
-        scrollbar-width: none;
-      }
+    a {
+      text-decoration: none;
     }
   }
 

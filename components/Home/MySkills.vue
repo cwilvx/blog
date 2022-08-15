@@ -1,34 +1,58 @@
 <template>
   <div id="myskills">
-    <div class="text">
-      Here are some languages that I have worked with recently.
-    </div>
+    <h1>My skills</h1>
+    <p>{{ text }}</p>
     <div id="skills">
-      <div>TypeScript</div>
-      <div>React</div>
-      <div>Vue</div>
-      <div>Python</div>
-      <div>Flask</div>
+      <div v-for="skill in skills">{{ skill }}</div>
     </div>
   </div>
 </template>
+
+<script setup lang="ts">
+import text from "~~/data/home/skills";
+
+const skills = [
+  "JavaScript ES6 & TS",
+  "Vue",
+  "React",
+  "Python3",
+  "Flask",
+  "Nuxt",
+  "Sass",
+  "HTML & CSS",
+];
+</script>
 
 <style lang="scss">
 @import "../../assets/scss/vars";
 
 #myskills {
+  margin-top: 5rem;
+
+  p {
+    width: 50%;
+  }
+
   #skills {
     margin-top: 1rem;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
     color: $white;
 
+    @include phone-only {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
     & > * {
-      padding: $small;
+      padding: $small 0;
       border-radius: $small;
       transition: all 0.5s ease;
       cursor: default;
+
+      &::before {
+        content: "◼ ";
+      }
 
       &:hover {
         background-size: 20rem;
@@ -36,7 +60,6 @@
     }
 
     & > * {
-      background-color: $bgblue;
       color: $blue;
     }
   }

@@ -13,6 +13,9 @@
         <p v-for="(p, index) in bio.paragraphs" :key="index">
           {{ p }}
         </p>
+        <p class="italic">
+          <i>{{ bio.italic }}</i>
+        </p>
       </div>
       <div class="img">
         <div class="image"></div>
@@ -32,18 +35,6 @@ import MySkills from "./MySkills.vue";
 @import "../../assets/scss/vars";
 
 #aboutme {
-  .h {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-
-    .line {
-      width: 50%;
-      height: 1px;
-      background: #e0e0e04f;
-    }
-  }
-
   .content {
     display: grid;
     gap: $small;
@@ -59,8 +50,8 @@ import MySkills from "./MySkills.vue";
       }
     }
 
-    .text {
-      font-size: 1.1rem;
+    .italic {
+      opacity: .5;
     }
   }
 

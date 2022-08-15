@@ -5,9 +5,9 @@
         <NuxtLink to="/blog" class="btn blog rounded">Visit Blog</NuxtLink>
         <NuxtLink to="/blog" class="btn resume rounded">See Resume</NuxtLink>
       </div>
-      <div class="text">{{ text.line3 }}</div>
-      <div class="desc">{{ text.line2 }}</div>
-      <div class="text">{{ text.line1 }} <br /></div>
+      <h1 class="text">{{ text.line3 }}</h1>
+      <h1 class="desc">{{ text.line2 }}</h1>
+      <h1 class="text">{{ text.line1 }} <br /></h1>
     </div>
   </div>
 </template>
@@ -32,6 +32,10 @@ import text from "~~/data/home/jumbotron";
     height: max-content;
   }
 
+  h1 {
+    margin: $small 0;
+  }
+
   .text {
     font-weight: bold;
     font-size: 2rem;
@@ -43,7 +47,6 @@ import text from "~~/data/home/jumbotron";
 
   .desc {
     font-size: 4rem;
-    margin-top: 1rem;
   }
 
   .nice {
@@ -51,7 +54,7 @@ import text from "~~/data/home/jumbotron";
   }
 
   .btns {
-    margin-top: 1rem;
+    margin-top: 2rem;
     display: flex;
     gap: 1rem;
 

@@ -7,7 +7,7 @@
     </div>
     <hr />
     <div class="images">
-      <img src="/img/music2.png" alt="" />
+      <img src="/img/music2.png" alt="my artist and albums" loading="lazy" />
     </div>
     <hr />
     <div class="music-quote">
@@ -39,12 +39,6 @@ const socials = [
     margin: $small auto;
   }
 
-  hr {
-    border: none;
-    border-top: solid 1px;
-    opacity: 0.5;
-  }
-
   margin-bottom: 2rem;
 
   .images {
@@ -55,8 +49,10 @@ const socials = [
   img {
     width: 100%;
     margin: auto;
+    height: 6rem;
     object-fit: contain;
     margin-top: 1rem;
+    filter: grayscale(1) drop-shadow(0 0 $small $muted);
   }
 
   #content {

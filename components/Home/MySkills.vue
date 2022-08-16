@@ -27,7 +27,7 @@ const skills = [
 @import "../../assets/scss/vars";
 
 #myskills {
-  margin-top: 5rem;
+  margin: 10rem 0;
 
   p {
     width: 50%;

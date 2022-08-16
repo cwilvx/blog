@@ -21,20 +21,20 @@
         <div class="image"></div>
       </div>
     </div>
-    <MySkills />
   </div>
 </template>
 
 <script setup>
 import bio from "~~/data/home/bio";
 import CardHeader from "./CardHeader.vue";
-import MySkills from "./MySkills.vue";
 </script>
 
 <style lang="scss">
 @import "../../assets/scss/vars";
 
 #aboutme {
+  margin: 10rem 0;
+
   .content {
     display: grid;
     gap: $small;
@@ -51,7 +51,7 @@ import MySkills from "./MySkills.vue";
     }
 
     .italic {
-      opacity: .5;
+      opacity: 0.5;
     }
   }
 
